@@ -13,7 +13,7 @@ export const productListReducer = (state = { products: [] }, action) => {
       return { ...state, loading: true };
     }
     case PRODUCT_LIST_SUCCESS: {
-      console.log('reducer: ', action.payload);
+     //  console.log('reducer: ', action.payload);
       return { ...state, loading: false, products: action.payload };
     }
     case PRODUCT_LIST_FAIL: {
@@ -33,11 +33,9 @@ export const productDetailReducer = (state = { product: {reviews: []} }, action)
       return { ...state, loading: true };
     }
     case PRODUCT_DETAILS_SUCCESS: {
-      console.log('reducer: ', action.payload);
       return { ...state, loading: false, product: action.payload };
     }
     case PRODUCT_DETAILS_FAIL: {
-      console.log('reducer-err: ', action.payload);
       return { ...state, loading: false, error: action.payload };
     }
 
